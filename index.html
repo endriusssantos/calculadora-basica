@@ -5,35 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora</title>
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              slateGray: "#767A99",
+              slateBlue: "#3C405F",
+              navy: "#25284B",
+              rosewood: "#9F4B7A",
+            },
+            boxShadow: {
+              calculatorShadow: "0px 0px 15px 4px rgba(0,0,0,0.1)",
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  </head>
-  <body>
-    <div class="grid">
-      <input type="text" readonly />
+  <body
+    class="bg-slateGray min-h-screen flex flex-col justify-center items-center"
+  >
+    <div class="bg-navy p-3 shadow-calculatorShadow">
+      <input type="text" readonly class="bg-slateBlue p-6" />
 
-      <div class="buttons">
-        <button class="btn number" data-value="7">7</button>
-        <button class="btn number" data-value="8">8</button>
-        <button class="btn number" data-value="9">9</button>
-        <button class="btn operator" data-value="/">/</button>
+      <div
+        class="buttons grid grid-cols-4 grid-rows-5 gap-1 mt-5 text-slate-200 font-medium text-2xl"
+      >
+        <button class="btn number bg-slateBlue p-3" data-value="7">7</button>
+        <button class="btn number bg-slateBlue p-3" data-value="8">8</button>
+        <button class="btn number bg-slateBlue p-3" data-value="9">9</button>
+        <button class="btn operator bg-slateBlue p-3 text-rosewood" data-value="/">/</button>
 
-        <button class="btn number" data-value="4">4</button>
-        <button class="btn number" data-value="5">5</button>
-        <button class="btn number" data-value="6">6</button>
-        <button class="btn operator" data-value="*">*</button>
+        <button class="btn number bg-slateBlue p-3" data-value="4">4</button>
+        <button class="btn number bg-slateBlue p-3" data-value="5">5</button>
+        <button class="btn number bg-slateBlue p-3" data-value="6">6</button>
+        <button class="btn operator bg-slateBlue p-3 text-rosewood" data-value="x">x</button>
 
-        <button class="btn number" data-value="1">1</button>
-        <button class="btn number" data-value="2">2</button>
-        <button class="btn number" data-value="3">3</button>
-        <button class="btn operator" data-value="-">-</button>
+        <button class="btn number bg-slateBlue p-3" data-value="1">1</button>
+        <button class="btn number bg-slateBlue p-3" data-value="2">2</button>
+        <button class="btn number bg-slateBlue p-3" data-value="3">3</button>
+        <button class="btn operator bg-slateBlue p-3 text-rosewood" data-value="-">-</button>
 
-        <button class="btn number" data-value="0">0</button>
-        <button class="btn point" data-value=".">.</button>
-        <button class="btn equal" data-value="=">=</button>
-        <button class="btn operator" data-value="+">+</button>
+        <button class="btn number bg-slateBlue p-3" data-value="0">0</button>
+        <button class="btn point bg-slateBlue p-3" data-value=".">.</button>
+        <button class="btn equal bg-slateBlue p-3 text-rosewood" data-value="C">C</button>
+        <button class="btn operator bg-slateBlue p-3 text-rosewood" data-value="+">+</button>
 
-        <button class="btn clear" data-value="C">C</button>
+        <button class="btn clear bg-rose-500 p-3 col-span-4" data-value="=">=</button>
       </div>
     </div>
   </body>
