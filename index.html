@@ -28,33 +28,125 @@
     class="bg-slateGray min-h-screen flex flex-col justify-center items-center"
   >
     <div class="bg-navy p-3 shadow-calculatorShadow">
-      <input type="text" readonly class="bg-slateBlue p-6" />
+      <input
+        type="text"
+        placeholder="0"
+        readonly
+        class="bg-slateBlue max-w-60 p-6 text-slate-200 text-right text-3xl cursor-default focus:outline-none placeholder:text-3xl placeholder:text-slate-200"
+        id="display"
+      />
 
       <div
         class="buttons grid grid-cols-4 grid-rows-5 gap-1 mt-5 text-slate-200 font-medium text-2xl"
       >
-        <button class="btn number bg-slateBlue p-3" data-value="7">7</button>
-        <button class="btn number bg-slateBlue p-3" data-value="8">8</button>
-        <button class="btn number bg-slateBlue p-3" data-value="9">9</button>
-        <button class="btn operator bg-slateBlue p-3 text-rosewood" data-value="/">/</button>
+        <button
+          class="btn number bg-slateBlue p-3 transition 0.2s ease-out hover:bg-rosewood"
+          data-value="7"
+        >
+          7
+        </button>
+        <button
+          class="btn number bg-slateBlue p-3 transition 0.2s ease-out hover:bg-rosewood"
+          data-value="8"
+        >
+          8
+        </button>
+        <button
+          class="btn number bg-slateBlue p-3 transition 0.2s ease-out hover:bg-rosewood"
+          data-value="9"
+        >
+          9
+        </button>
+        <button
+          class="btn operator bg-slateBlue p-3 text-rosewood transition 0.2s ease-out hover:bg-rosewood hover:text-slate-200"
+          data-value="/"
+        >
+          /
+        </button>
 
-        <button class="btn number bg-slateBlue p-3" data-value="4">4</button>
-        <button class="btn number bg-slateBlue p-3" data-value="5">5</button>
-        <button class="btn number bg-slateBlue p-3" data-value="6">6</button>
-        <button class="btn operator bg-slateBlue p-3 text-rosewood" data-value="x">x</button>
+        <button
+          class="btn number bg-slateBlue p-3 transition 0.2s ease-out hover:bg-rosewood"
+          data-value="4"
+        >
+          4
+        </button>
+        <button
+          class="btn number bg-slateBlue p-3 transition 0.2s ease-out hover:bg-rosewood"
+          data-value="5"
+        >
+          5
+        </button>
+        <button
+          class="btn number bg-slateBlue p-3 transition 0.2s ease-out hover:bg-rosewood"
+          data-value="6"
+        >
+          6
+        </button>
+        <button
+          class="btn operator bg-slateBlue p-3 text-rosewood transition 0.2s ease-out hover:bg-rosewood hover:text-slate-200"
+          data-value="x"
+        >
+          x
+        </button>
 
-        <button class="btn number bg-slateBlue p-3" data-value="1">1</button>
-        <button class="btn number bg-slateBlue p-3" data-value="2">2</button>
-        <button class="btn number bg-slateBlue p-3" data-value="3">3</button>
-        <button class="btn operator bg-slateBlue p-3 text-rosewood" data-value="-">-</button>
+        <button
+          class="btn number bg-slateBlue p-3 transition 0.2s ease-out hover:bg-rosewood"
+          data-value="1"
+        >
+          1
+        </button>
+        <button
+          class="btn number bg-slateBlue p-3 transition 0.2s ease-out hover:bg-rosewood"
+          data-value="2"
+        >
+          2
+        </button>
+        <button
+          class="btn number bg-slateBlue p-3 transition 0.2s ease-out hover:bg-rosewood"
+          data-value="3"
+        >
+          3
+        </button>
+        <button
+          class="btn operator bg-slateBlue p-3 text-rosewood transition 0.2s ease-out hover:bg-rosewood hover:text-slate-200"
+          data-value="-"
+        >
+          -
+        </button>
 
-        <button class="btn number bg-slateBlue p-3" data-value="0">0</button>
-        <button class="btn point bg-slateBlue p-3" data-value=".">.</button>
-        <button class="btn equal bg-slateBlue p-3 text-rosewood" data-value="C">C</button>
-        <button class="btn operator bg-slateBlue p-3 text-rosewood" data-value="+">+</button>
+        <button
+          class="btn number bg-slateBlue p-3 transition 0.2s ease-out hover:bg-rosewood"
+          data-value="0"
+        >
+          0
+        </button>
+        <button
+          class="btn point bg-slateBlue p-3 transition 0.2s ease-out hover:bg-rosewood"
+          data-value="."
+        >
+          .
+        </button>
+        <button
+          class="btn clear bg-slateBlue p-3 text-rosewood transition 0.2s ease-out hover:bg-rosewood hover:text-slate-200"
+          data-value="C"
+        >
+          C
+        </button>
+        <button
+          class="btn operator bg-slateBlue p-3 text-rosewood transition 0.2s ease-out hover:bg-rosewood hover:text-slate-200"
+          data-value="+"
+        >
+          +
+        </button>
 
-        <button class="btn clear bg-rose-500 p-3 col-span-4" data-value="=">=</button>
+        <button
+          class="btn equal bg-rose-500 p-3 col-span-4 transition 0.2s ease-out hover:opacity-80"
+          data-value="="
+        >
+          =
+        </button>
       </div>
     </div>
+    <script src="./src/js/index.js"></script>
   </body>
 </html>
